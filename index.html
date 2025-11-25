@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Afnan - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">MA</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="admin-btn" onclick="openAdminPanel(event)">⚙️ Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-picture" id="profilePicture">
+                <div class="profile-picture-placeholder">👨‍💻</div>
+            </div>
+            <h1 id="heroName">Mohamed Afnan</h1>
+            <p class="subtitle" id="heroSubtitle">Computer Science & Electronic Automation Engineer</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+                <a href="#projects" class="btn btn-outline">View Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <p id="aboutText1">I'm a motivated undergraduate specializing in Computer Science, Electronics, and Automation Engineering with hands-on experience in IoT systems, embedded programming, and web/mobile development.</p>
+                    <p id="aboutText2">Passionate about solving real-world problems using both software and electronics, I'm skilled in microcontrollers, circuit design, full-stack development, and building reliable, data-driven automation systems.</p>
+                    <p id="aboutText3">Currently pursuing BSc (External) in Electronic & Automation Technologies at University of Colombo and BSc (Hons) in Computer Science at University of Westminster (IIT), Sri Lanka.</p>
+                </div>
+                <div class="skills-grid animate-on-scroll" id="skillsGrid">
+                    <div class="skill-card">Python</div>
+                    <div class="skill-card">C/C++</div>
+                    <div class="skill-card">Java</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">React Native</div>
+                    <div class="skill-card">Arduino</div>
+                    <div class="skill-card">ESP32</div>
+                    <div class="skill-card">Raspberry Pi</div>
+                    <div class="skill-card">IoT</div>
+                    <div class="skill-card">PCB Design</div>
+                    <div class="skill-card">CAD/3D Print</div>
+                    <div class="skill-card">Laravel</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Experience</h2>
+            <div class="timeline" id="experienceTimeline">
+                <!-- Experience will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <div class="contact-item">
+                        <span class="icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p id="contactEmail">mnmafnan2021@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📱</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p id="contactPhone">0765650304</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Location</strong>
+                            <p id="contactLocation">78/8, Zaviya Road, Kattankudy 01</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form animate-on-scroll" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry-type">Inquiry Type *</label>
+                        <select id="inquiry-type" name="inquiry-type" required>
+                            <option value="">Select type...</option>
+                            <option value="job">Job Opportunity</option>
+                            <option value="project">Project Proposal</option>
+                            <option value="freelance">Freelance Work</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Afnan22725" target="_blank" title="GitHub" id="githubLink">💻</a>
+                <a href="https://linkedin.com/in/mohamed-afnan1abb26282" target="_blank" title="LinkedIn" id="linkedinLink">💼</a>
+                <a href="mailto:mnmafnan2021@gmail.com" title="Email" id="emailLink">📧</a>
+            </div>
+            <p>&copy; 2025 Mohamed Afnan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="password-modal">
+            <div class="icon">🔒</div>
+            <h2>Admin Access</h2>
+            <p style="color: var(--gray);">Enter password to access admin panel</p>
+            <div class="password-input-group">
+                <input 
+                    type="password" 
+                    id="adminPassword" 
+                    placeholder="••••••"
+                    onkeypress="handlePasswordKeypress(event)"
+                    autocomplete="off"
+                >
+                <div class="password-error" id="passwordError">
+                    ❌ Incorrect password. Please try again.
+                </div>
+                <div class="password-hint">
+                    Hint: Default password is "#####"
+                </div>
+            </div>
+            <div class="password-buttons">
+                <button class="btn btn-outline" onclick="closePasswordModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="checkPassword()">Unlock</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div class="modal" id="adminModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Admin Panel</h2>
+                <button class="close-btn" onclick="closeAdminPanel()">Close</button>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="admin-section">
+                <h3>Profile Settings</h3>
+                <div class="admin-grid">
+                    <div class="form-group">
+                        <label>Profile Picture URL</label>
+                        <input type="text" id="adminProfilePic" placeholder="https://your-image-url.com/image.jpg">
+                        <small style="color: var(--gray);">Upload your image to GitHub or use image hosting service</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="adminName" value="Mohamed Afnan">
+                    </div>
+                    <div class="form-group">
+                        <label>Subtitle</label>
+                        <input type="text" id="adminSubtitle" value="Computer Science & Electronic Automation Engineer">
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="admin-section">
+                <h3>About Text</h3>
+                <div class="admin-grid">
+                    <div class="form-group">
+                        <label>Paragraph 1</label>
+                        <textarea id="adminAbout1" rows="3">I'm a motivated undergraduate specializing in Computer Science, Electronics, and Automation Engineering with hands-on experience in IoT systems, embedded programming, and web/mobile development.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Paragraph 2</label>
+                        <textarea id="adminAbout2" rows="3">Passionate about solving real-world problems using both software and electronics, I'm skilled in microcontrollers, circuit design, full-stack development, and building reliable, data-driven automation systems.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Paragraph 3</label>
+                        <textarea id="adminAbout3" rows="3">Currently pursuing BSc (External) in Electronic & Automation Technologies at University of Colombo and BSc (Hons) in Computer Science at University of Westminster (IIT), Sri Lanka.</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="admin-section">
+                <h3>Contact Information</h3>
+                <div class="admin-grid">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="adminEmail" value="mnmafnan2021@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" id="adminPhone" value="0765650304">
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" id="adminLocation" value="78/8, Zaviya Road, Kattankudy 01">
+                    </div>
+                    <div class="form-group">
+                        <label>GitHub URL</label>
+                        <input type="text" id="adminGithub" value="https://github.com/Afnan22725">
+                    </div>
+                    <div class="form-group">
+                        <label>LinkedIn URL</label>
+                        <input type="text" id="adminLinkedin" value="https://linkedin.com/in/mohamed-afnan1abb26282">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Management -->
+            <div class="admin-section">
+                <h3>Skills</h3>
+                <div class="form-group">
+                    <label>Skills (comma-separated)</label>
+                    <textarea id="adminSkills" rows="3" placeholder="Python, C/C++, Java, JavaScript, etc."></textarea>
+                </div>
+            </div>
+
+            <!-- Projects Management -->
+            <div class="admin-section">
+                <h3>Projects</h3>
+                <div id="projectsEditor"></div>
+                <button class="btn btn-primary btn-small" onclick="addNewProject()">+ Add Project</button>
+            </div>
+
+            <!-- Experience Management -->
+            <div class="admin-section">
+                <h3>Experience</h3>
+                <div id="experienceEditor"></div>
+                <button class="btn btn-primary btn-small" onclick="addNewExperience()">+ Add Experience</button>
+            </div>
+
+            <!-- Data Management -->
+            <div class="admin-section">
+                <h3>Data Management</h3>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn btn-outline btn-small" onclick="exportData()">📥 Export Data</button>
+                    <label class="btn btn-outline btn-small" style="margin: 0; cursor: pointer;">
+                        📤 Import Data
+                        <input type="file" accept=".json" onchange="importData(event)" style="display: none;">
+                    </label>
+                    <button class="btn btn-danger btn-small" onclick="resetData()">🔄 Reset to Default</button>
+                </div>
+                <small style="color: var(--gray); display: block; margin-top: 1rem;">
+                    Export your data as backup or import previously saved data
+                </small>
+            </div>
+
+            <!-- Save Button -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn btn-primary" onclick="saveAllChanges()">💾 Save All Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
